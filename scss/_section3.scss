@@ -36,6 +36,7 @@
     padding: 40px;
     border-radius: $font-size;
     background: #ffffff14;
+
     flex-direction: column;
     gap: 20px;
   }
@@ -44,15 +45,17 @@
   gap: 4px;
 }
 .feedback_txt {
+  // 設定最小高度，避免行數不同時的排列問題
   min-height: 215px;
+  // 剩下空間都留給文字區
   flex-grow: 1;
 }
 .customer {
-  gap: $font-size;
-}
-.customer_info {
-  flex-grow: 1;
+  gap: 16px;
 }
 .customer_pic {
   border-radius: 50%;
+}
+.customer_info {
+  flex-grow: 1;
 }

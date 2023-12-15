@@ -1,7 +1,8 @@
 .section2 {
-  margin-bottom: 10rem;
+  margin-bottom: 160px;
   // padding: 0 12px;
 }
+
 .service_txt {
   gap: 24px;
   justify-content: end;
@@ -9,26 +10,30 @@
   margin-bottom: 80px;
   h3 {
     // width: 32%;
+    // 將p設定最大可達寬度，剩下的空間都給h3，可使確保h3可貼齊左側
     flex-grow: 1;
   }
   p {
+    // SCSS若要使用運算符，要使用calc()函數
     max-width: calc((100% - 11 * 24px) / 12 * 8 + 7 * 24px);
     font-weight: 900;
     font-size: $font-size * 3;
     line-height: 1.2;
   }
 }
+
 .service {
-  gap: $font-size * 1.5;
+  gap: 24px;
   .item {
     // width: 100%;
+    // flex要寫寬度，但不寫死寬度避免爆版或跑版
     max-width: calc((100% - 48px)/3);
     border-radius: $font-size;
     border: 1px solid $color-black80;
     padding: 80px 40px;
+
     flex-direction: column;
-    // justify-content: space-between;
-    gap: 24px;
+    gap: 20px;
     p {
       color: $color-black20;
     }

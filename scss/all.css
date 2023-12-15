@@ -192,7 +192,7 @@ nav.header {
 }
 
 .section2 {
-  margin-bottom: 10rem;
+  margin-bottom: 160px;
 }
 
 .service_txt {
@@ -220,7 +220,7 @@ nav.header {
   border: 1px solid #525252;
   padding: 80px 40px;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 .service .item p {
   color: #f2f2f2;
@@ -275,12 +275,12 @@ nav.header {
   gap: 16px;
 }
 
-.customer_info {
-  flex-grow: 1;
-}
-
 .customer_pic {
   border-radius: 50%;
+}
+
+.customer_info {
+  flex-grow: 1;
 }
 
 .section4 {
@@ -327,7 +327,6 @@ nav.header {
 .search input[type=search] {
   font-size: 16px;
   line-height: 1.5;
-  max-width: 100%;
   flex-grow: 1;
 }
 
@@ -336,15 +335,14 @@ nav.header {
   justify-content: space-between;
 }
 .AI_nav a {
+  display: block;
   line-height: 1.5;
 }
 
 .AInav_btn {
-  display: block;
   padding: 20px 32px 20px 40px;
   border: 1px solid #f2f2f2;
   border-radius: 16px;
-  align-items: center;
 }
 
 .AI_class {
@@ -355,12 +353,16 @@ nav.header {
   align-items: center;
 }
 .AI_class li a {
-  display: inline-block;
   padding: 8px 16px;
   border-radius: 16px;
   color: #919191;
 }
 .AI_class li a:hover {
+  color: #020202;
+  background-color: #f2f2f2;
+  font-weight: 700;
+}
+.AI_class .active a {
   color: #020202;
   background-color: #f2f2f2;
   font-weight: 700;
@@ -379,7 +381,7 @@ nav.header {
   border-radius: 16px;
   overflow: hidden;
 }
-.card > div + div {
+.card > div:not(:first-child) + div {
   border-top: 1px solid #f2f2f2;
 }
 .card .flex {
@@ -390,6 +392,9 @@ nav.header {
   overflow: hidden;
   height: 312px;
 }
+.card_pic img {
+  height: 100%;
+}
 .card_pic img:hover {
   transition: 0.3s;
   transform: scale(1.2, 1.2);
@@ -399,7 +404,6 @@ nav.header {
 .AI_developer,
 .AI_hashtag {
   padding: 20px 32px;
-  background-color: #ffffff;
 }
 
 .card_txt {
@@ -414,19 +418,16 @@ nav.header {
 }
 
 .pages {
+  gap: 4px;
   justify-content: end;
 }
-
-.page {
-  gap: 4px;
-}
-.page li {
+.pages li {
   width: 48px;
   height: 48px;
   display: flex;
   align-items: center;
 }
-.page li a {
+.pages li a {
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -437,11 +438,14 @@ nav.header {
   justify-content: center;
   align-items: center;
 }
-.page li:not(:last-child):hover a {
+.pages li:not(:last-child):hover a {
   color: #ffffff;
   background-color: #020202;
 }
-.page .active {
+.pages li:last-child:hover a {
+  background-color: #d1d1d1;
+}
+.pages .active {
   background-color: #020202;
   color: #ffffff;
 }
@@ -460,8 +464,7 @@ nav.header {
   padding-bottom: 80px;
   justify-content: space-between;
 }
-.section6 .txt li {
-  display: flex;
+.section6 .txt {
   flex-direction: column;
   align-items: center;
 }
@@ -476,6 +479,7 @@ nav.header {
 .footer {
   padding: 12px 0;
   border-top: 1px solid #ffffff;
+  gap: 20px;
 }
 .footer a {
   display: inline-block;
@@ -483,7 +487,6 @@ nav.header {
   line-height: 1.5;
   font-weight: 700;
   padding: 20px 12px;
-  gap: 20px;
 }
 
 .copyright {

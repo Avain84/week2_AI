@@ -43,7 +43,7 @@
   input[type="search"] {
     font-size: $font-size;
     line-height: 1.5;
-    max-width: 100%;
+    // max-width: 100%;
     flex-grow: 1;
   }
 }
@@ -52,16 +52,15 @@
   margin-bottom: 40px;
   justify-content: space-between;
   a {
+    display: block;
     line-height: 1.5;
   }
 }
 // 導覽列按鈕
 .AInav_btn {
-  display: block;
   padding: 20px 32px 20px 40px;
   border: 1px solid $color-black20;
   border-radius: $font-size;
-  align-items: center;
 }
 // AI工具導覽分類
 .AI_class {
@@ -70,7 +69,6 @@
     display: flex;
     align-items: center;
     a {
-      display: inline-block;
       padding: 8px 16px;
       border-radius: $font-size;
       color: $color-black60;
@@ -81,6 +79,12 @@
       }
     }
   }
+  // 當在該頁面的時候顯示有效果
+  .active a{
+    color: $color-black100;
+    background-color: $color-black20;
+    font-weight: 700;
+  }
 }
 // AI工具卡片
 .AI_cards {
@@ -90,12 +94,13 @@
 }
 .card {
   flex-direction: column;
+  // 設定寬度計算，確認以便wrap計算一行要幾個
   max-width: calc((100% - 48px) / 3);
   // min-height: 558px;
   border: 1px solid $color-black20;
   border-radius: $font-size;
   overflow: hidden;
-  & > div + div {
+  & > div:not(:first-child) + div {
     border-top: 1px solid $color-black20;
   }
   .flex {
@@ -106,6 +111,7 @@
   overflow: hidden;
   height: 312px;
   img {
+    height: 100%;
     &:hover {
       transition: 0.3s;
       transform: scale(1.2, 1.2);
@@ -116,7 +122,6 @@
 .AI_developer,
 .AI_hashtag {
   padding: 20px 32px;
-  background-color: $color-black0;
 }
 .card_txt {
   min-height: 118px;
@@ -130,10 +135,8 @@
 
 // 頁數
 .pages {
-  justify-content: end;
-}
-.page {
   gap: 4px;
+  justify-content: end;
   li {
     width: 48px;
     height: 48px;
@@ -146,6 +149,7 @@
       border-radius: $font-size;
       color: $color-black100;
       font-weight: 700;
+      // 讓文字水平垂直置中
       display: flex;
       justify-content: center;
       align-items: center;
@@ -154,7 +158,11 @@
       color: $color-black0;
       background-color: $color-black100;
     }
+    &:last-child:hover a{
+      background-color: $color-black40;
+    }
   }
+  // 當在active頁面的時候顯示顏色
   .active{
     background-color: $color-black100;
     color: $color-black0;
