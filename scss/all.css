@@ -126,6 +126,10 @@ body {
   background-color: #000;
 }
 
+.wrap {
+  margin: 0 12px;
+}
+
 .container {
   max-width: 1296px;
   margin: 0 auto;
@@ -147,7 +151,7 @@ body {
   font-weight: 900;
 }
 
-header.container {
+header .container {
   height: 80px;
   margin-bottom: 40px;
   border-bottom: 1px solid #ffffff;
@@ -283,10 +287,16 @@ nav.header {
   flex-grow: 1;
 }
 
-.section4 {
-  margin-bottom: 87px;
+.AI {
+  margin: 0;
   background-color: #ffffff;
   border-radius: 160px;
+  margin-bottom: 87px;
+}
+
+.section4 {
+  margin-left: 12px;
+  margin-right: 12px;
 }
 .section4 h2,
 .section4 h3,
@@ -448,6 +458,10 @@ nav.header {
 .pages .active {
   background-color: #020202;
   color: #ffffff;
+}
+
+.dt_display_none {
+  display: none;
 }
 
 .section5 {

@@ -1,7 +1,12 @@
-.section4 {
-  margin-bottom: 87px;
+.AI {
+  margin: 0;
   background-color: $color-black0;
   border-radius: $font-size * 10;
+  margin-bottom: 87px;
+}
+.section4 {
+  margin-left: 12px;
+  margin-right: 12px;
   h2,
   h3,
   h4,
@@ -12,8 +17,6 @@
     color: $color-black100;
   }
   .container {
-    // padding-right: 12px;
-    // padding-left: 12px;
     padding-top: $font-size * 10;
     padding-bottom: $font-size * 10;
   }
@@ -80,7 +83,7 @@
     }
   }
   // 當在該頁面的時候顯示有效果
-  .active a{
+  .active a {
     color: $color-black100;
     background-color: $color-black20;
     font-weight: 700;
@@ -158,13 +161,16 @@
       color: $color-black0;
       background-color: $color-black100;
     }
-    &:last-child:hover a{
+    &:last-child:hover a {
       background-color: $color-black40;
     }
   }
   // 當在active頁面的時候顯示顏色
-  .active{
+  .active {
     background-color: $color-black100;
     color: $color-black0;
   }
+}
+.dt_display_none {
+  display: none;
 }
