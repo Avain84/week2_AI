@@ -1,0 +1,21 @@
+.footer{
+  padding: 12px 0;
+  border-top: 1px solid $color-black0;
+  a{
+    display: inline-block;
+    font-size: $font-size;
+    line-height: 1.5;
+    font-weight: 700;
+    padding: 20px 12px;
+    gap: 20px;
+  }
+}
+.copyright{
+  margin-right: 80px;
+}
+.web{
+  gap: 20px;
+}
+.backtop{
+  margin-left: auto;
+}

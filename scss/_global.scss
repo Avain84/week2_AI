@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.2;
+  color: $color-black0;
+}
+h1 {
+  font-size: $font-size * 3;
+  font-weight: 900;
+}
+h2 {
+  font-size: $font-size * 2.5;
+  font-weight: 900;
+}
+h3 {
+  font-size: $font-size * 2;
+  font-weight: 900;
+}
+h4 {
+  font-size: $font-size * 1.75;
+}
+h6 {
+  font-size: $font-size * 1.25;
+  font-weight: 900;
+}
+a {
+  font-size: $font-size;
+  text-decoration: none;
+}
+p {
+  font-size: $font-size;
+  line-height: 1.5;
+}
+small {
+  font-size: $font-size - 2px;
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  object-fit: cover;
+}
+input {
+  outline: none;
+}
+body {
+  background-color: #000;
+}
+.container {
+  max-width: 1296px;
+//   padding-left: 12px;
+//   padding-right: 12px;
+  margin: 0 auto;
+//   overflow: hidden;
+}
+.flex {
+  display: flex;
+}
+.btn {
+  margin-top: 40px;
+  a {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: $font-size * 1.25;
+    border: 1px solid $color-black0;
+    border-radius: $font-size;
+    font-weight: 900;
+  }
+}
