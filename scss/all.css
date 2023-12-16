@@ -160,11 +160,16 @@ nav.header {
   background-color: #020202;
   border-bottom: 1px solid #ffffff;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 12px;
-  right: 12px;
-  margin: 0 auto;
+}
+@media (max-width: 375px) {
+  nav.header {
+    position: fixed;
+    top: 0;
+    left: 12px;
+    right: 12px;
+    margin: 0 auto;
+    z-index: 10;
+  }
 }
 
 .page_logo {
@@ -233,7 +238,7 @@ nav.header {
   .mobile_menu .mobile_menu_list {
     background-color: #020202;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 80px - 137px);
     position: fixed;
     top: 80.67px;
     left: 0;
@@ -255,10 +260,40 @@ nav.header {
     text-decoration: none;
   }
   .mobile_menu .mobile_menu_list li a:hover {
-    background-color: #525252;
+    color: #919191;
   }
   .mobile_menu input:checked ~ .mobile_menu_list {
     transform: translateX(0);
+  }
+}
+
+.mobile_menu_footer {
+  display: none;
+}
+.mobile_menu_footer .mobile_footer_web {
+  gap: 20px;
+}
+.mobile_menu_footer a {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  padding: 12px 0px;
+}
+@media (max-width: 375px) {
+  .mobile_menu_footer {
+    background-color: #020202;
+    flex-direction: column;
+    gap: 12px;
+  }
+  input:checked ~ .mobile_menu_footer {
+    display: block;
+    padding: 20px 0;
+    border-top: 1px solid #ffffff;
+    position: absolute;
+    top: calc(100vh - 80px - 56px);
+    left: 0;
+    right: 0;
   }
 }
 
@@ -291,13 +326,40 @@ nav.header {
 .deco {
   margin-top: 100px;
   justify-content: end;
+  overflow: hidden;
 }
 @media (max-width: 375px) {
   .deco {
     margin-top: 180px;
   }
 }
+.deco .deco1 {
+  animation: deco_animation 4s 0.7s infinite both;
+}
+.deco .deco2 {
+  animation: deco_animation 4s 0.4s infinite both;
+}
+.deco .deco3 {
+  animation: deco_animation 4s 0.1s infinite both;
+}
 
+@keyframes deco_animation {
+  0% {
+    transform: translateY(100%);
+  }
+  35% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  85% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
 .section2 {
   margin-bottom: 160px;
 }
@@ -662,6 +724,7 @@ nav.header {
 
 .card_txt {
   min-height: 118px;
+  flex-grow: 1;
 }
 .card_txt h6 {
   margin-bottom: 12px;

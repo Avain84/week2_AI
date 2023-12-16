@@ -20,7 +20,24 @@
   // 推擠跟btn的距離
   margin-top: 100px;
   justify-content: end;
+  overflow: hidden;
   @include mobile{
     margin-top: 180px;
   }
+  .deco1{
+    animation: deco_animation 4s .7s infinite both;
+  }
+  .deco2{
+    animation: deco_animation 4s .4s infinite both;
+  }
+  .deco3{
+    animation: deco_animation 4s .1s infinite both;
+  }
+}
+@keyframes deco_animation{
+  0%{transform: translateY(100%);}
+  35%{transform: translateY(0%);}
+  50%{transform: translateY(0%);}
+  85%{transform: translateY(-100%);}
+  100%{transform: translateY(-100%);}
 }

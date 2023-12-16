@@ -7,9 +7,12 @@ nav.header {
   background-color: $color-black100;
   border-bottom: 1px solid $color-black0;
   justify-content: space-between;
-  position: fixed;
-  top: 0;left: 12px;right: 12px;
-  margin: 0 auto;
+  @include mobile{
+    position: fixed;
+    top: 0;left: 12px;right: 12px;
+    margin: 0 auto;
+    z-index: 10;
+  }
 }
 .page_logo {
   max-width: 245px;
@@ -68,7 +71,7 @@ nav.header {
     .mobile_menu_list {
       background-color: $color-black100;
       width: 100%;
-      height: calc(100vh - 80px);
+      height: calc(100vh - 80px - 137px);
       
       position: fixed;
       top: 80.67px;left: 0;right: 0;
@@ -89,7 +92,7 @@ nav.header {
           text-decoration: none;
         }
         a:hover {
-          background-color: $color-black80;
+          color: $color-black60;
         }
       }
     }
@@ -98,5 +101,34 @@ nav.header {
       transform: translateX(0);
 
     }
+  }
+}
+.mobile_menu_footer{
+  display: none;
+  .mobile_footer_web{
+    gap: 20px;
+  }
+  a {
+    display: inline-block;
+    font-size: $font-size;
+    line-height: 1.5;
+    font-weight: 700;
+    padding: 12px 0px;
+  }
+  @include mobile{
+    background-color: $color-black100;
+
+    flex-direction: column;
+    gap: 12px;
+    input:checked ~ &{
+      display: block;
+      padding: 20px 0;
+      border-top: 1px solid $color-black0;
+      position: absolute;
+      top: calc(100vh - 80px - 56px);
+      left: 0;right: 0;
+      // left: 12px;right: 12px;
+    }
+
   }
 }
