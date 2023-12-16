@@ -13,7 +13,6 @@
   <body>
     <header class="wrap">
       <div class="container" id="top">
-        <!-- <input type="checkbox" id="menu_control"> -->
         <nav class="header flex">
           <div class="page_logo">
             <img src="img/logo.png" alt="LOGO" />
@@ -26,11 +25,17 @@
               <a href="#">定價</a>
             </li>
           </ul>
-          <!-- <div class="menu">
-            <label for="menu_control">
-                      <i class="fa-solid fa-bars"></i>
-                  </label>
-          </div> -->
+          <label class="mobile_menu">
+            <input type="checkbox">
+            <div class="mobile_menu_icon">
+              <img src="img/icons/menu.png" alt="menu">
+              <img src="img/icons/close.png" alt="menu_close">
+            </div>
+            <ul class="mobile_menu_list flex">
+              <li><a href="index.html">首頁</a></li>
+              <li><a href="#">定價</a></li>
+            </ul>
+          </label>
         </nav>
       </div>
     </header>
@@ -40,7 +45,7 @@
           透過<br />
           AI工具王的<br />
           強大模型<br />
-          讓您的業務更聰明
+          讓您的業務<br class="mobile_br">更聰明
         </h1>
         <div class="btn">
           <a href="#">開始使用</a>
@@ -57,7 +62,7 @@
         <div class="service_txt flex">
           <h3>我們的服務</h3>
           <p>
-            我們相信透過 AI 技術，<br />包括圖像識別、自然語言處理和機器翻譯等，讓您更快、更準確地做出決策。
+            我們相信透過 AI 技術，<br class="mobile_br" />包括圖像識別、自然語言處理和機器翻譯等，讓您更快、更準確地做出決策。
           </p>
         </div>
         <div class="service flex">
@@ -194,7 +199,7 @@
     <section class="wrap AI">
       <div class="section4">
         <div class="container">
-          <h2>這些超酷的應用，<br class="dt_display_none" />都來自 AI工具王</h2>
+          <h2>這些超酷的應用，<br class="mobile_br">都來自 AI工具王</h2>
           <label class="search flex" for="search_box">
             <input type="image" src="img/icons/search.png" />
             <input type="search" placeholder="輸入關鍵字搜尋" id="search_box" />
@@ -219,6 +224,15 @@
               />
             </a>
           </div>
+          <ul class="mobile_AI_class AI_class flex">
+            <li class="active"><a href="#">全部</a></li>
+            <li><a href="#">聊天</a></li>
+            <li><a href="#">影像辨識</a></li>
+            <li><a href="#">翻譯</a></li>
+            <li><a href="#">行銷</a></li>
+            <li><a href="#">客服</a></li>
+            <li><a href="#">生產力</a></li>
+          </ul>
           <ul class="AI_cards flex">
             <li class="card flex">
               <div class="card_pic">
@@ -363,7 +377,7 @@
     </section>
     <section class="wrap">
       <div class="section5 container flex">
-        <h1>現在就來建立屬於你的服務吧</h1>
+        <h1>現在就來建立<br class="mobile_br">屬於你的服務吧</h1>
         <div class="btn">
           <a href="#"
             >開始使用&ensp;<img
@@ -385,21 +399,28 @@
       </div>
     </section>
     <footer class="wrap">
-      <div class="footer container flex">
-        <div class="copyright">
-          <a href="#">AI工具王 &copy; 2023</a>
+      <div class="footer container">
+        <div class="dt_footer flex">
+          <div class="copyright">
+            <a href="#">AI工具王 &copy; 2023</a>
+          </div>
+          <ul class="web flex">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+          <div class="backtop">
+            <a href="#top"
+              >Back to top&ensp;
+              <img src="img/icons/arrow upward.png" alt="Back to top"
+            /></a>
+          </div>
         </div>
-        <ul class="web flex">
+        <ul class="mobile_footer_web web flex">
           <li><a href="#">Facebook</a></li>
           <li><a href="#">Twitter</a></li>
           <li><a href="#">Instagram</a></li>
         </ul>
-        <div class="backtop">
-          <a href="#top"
-            >Back to top&ensp;
-            <img src="img/icons/arrow upward.png" alt="Back to top"
-          /></a>
-        </div>
       </div>
     </footer>
   </body>

@@ -3,12 +3,20 @@
   padding-top: 80px;
   padding-bottom: 80px;
   justify-content: space-between;
+  @include mobile{
+    flex-direction: column-reverse;
+    gap: 40px;
+    align-items: start;
+  }
   .txt {
     flex-direction: column;
     align-items: center;
     a {
       font-size: $font-size * 5;
       font-weight: 900;
+      @include mobile{
+        font-size: $font-size * 3;
+      }
     }
   }
   .logo {

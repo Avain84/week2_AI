@@ -1,15 +1,23 @@
 header .container {
   height: 80px;
   margin-bottom: 40px;
-  border-bottom: 1px solid $color-black0;
 }
 nav.header {
   // 導覽列貼齊兩端
+  background-color: $color-black100;
+  border-bottom: 1px solid $color-black0;
   justify-content: space-between;
+  position: fixed;
+  top: 0;left: 12px;right: 12px;
+  margin: 0 auto;
 }
 .page_logo {
   max-width: 245px;
   padding: 20px 0;
+  @include mobile {
+    max-width: 147px;
+    padding: 28px 0;
+  }
 }
 .nav-menu {
   gap: 20px;
@@ -26,5 +34,69 @@ nav.header {
     display: inline-block;
     padding: 12px 0;
     line-height: 1.5;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+.mobile_menu {
+  display: none;
+  @include mobile {
+    display: block;
+    input {
+      display: none;
+    }
+    .mobile_menu_icon img[alt="menu_close"]{
+      display: none;
+    }
+    input:checked ~ .mobile_menu_icon img[alt="menu_close"]{
+      display: block;
+    }
+    input:checked ~ .mobile_menu_icon img[alt="menu"]{
+      display: none;
+    }
+    .mobile_menu_icon {
+      position: absolute;
+      right: 0px;top: 20px;
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      img {
+        object-fit: cover;
+      }
+    }
+    .mobile_menu_list {
+      background-color: $color-black100;
+      width: 100%;
+      height: calc(100vh - 80px);
+      
+      position: fixed;
+      top: 80.67px;left: 0;right: 0;
+      margin: 0 auto;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      transform: translateX(100%);
+      li {
+        padding: 10px 20px;
+        color: $color-black0;
+        a {
+          font-weight: 900;
+          font-size: $font-size * 5;
+          color: $color-black0;
+          text-decoration: none;
+        }
+        a:hover {
+          background-color: $color-black80;
+        }
+      }
+    }
+    input:checked ~ .mobile_menu_list {
+      // display: block;
+      transform: translateX(0);
+
+    }
   }
 }

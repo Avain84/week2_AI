@@ -1,5 +1,8 @@
 .section2 {
   margin-bottom: 160px;
+  @mixin mobile{
+    margin-bottom: 178px;
+  }
 }
 
 .service_txt {
@@ -7,10 +10,17 @@
   justify-content: end;
   align-items: start;
   margin-bottom: 80px;
+  @include mobile{
+    display: block;
+  }
   h3 {
     // width: 32%;
     // 將p設定最大可達寬度，剩下的空間都給h3，可使確保h3可貼齊左側
     flex-grow: 1;
+    @include mobile{
+      font-size: $font-size * 1.25;
+      margin-bottom: 24px;
+    }
   }
   p {
     // SCSS若要使用運算符，要使用calc()函數
@@ -18,23 +28,38 @@
     font-weight: 900;
     font-size: $font-size * 3;
     line-height: 1.2;
+    @include mobile{
+      max-width: 100%;
+      font-size: $font-size * 2;
+      .mobile_br{
+        display: none;
+      }
+    }
   }
 }
 
 .service {
   gap: 24px;
+  @include mobile{
+    flex-direction: column;
+    gap: 12px;
+  }
   .item {
     // width: 100%;
     // flex要寫寬度，但不寫死寬度避免爆版或跑版
     max-width: calc((100% - 48px) / 3);
+    padding: 80px 40px;
     border-radius: $font-size;
     border: 1px solid $color-black80;
-    padding: 80px 40px;
 
     flex-direction: column;
     gap: 20px;
     p {
       color: $color-black20;
+    }
+    @include mobile{
+      max-width: 100%;
+      padding: 40px 20px;
     }
   }
 }

@@ -1,7 +1,6 @@
 .footer {
   padding: 12px 0;
   border-top: 1px solid $color-black0;
-  gap: 20px;
   a {
     display: inline-block;
     font-size: $font-size;
@@ -10,12 +9,32 @@
     padding: 20px 12px;
   }
 }
-.copyright {
-  margin-right: 80px;
-}
-.web {
+.dt_footer{
   gap: 20px;
+  @include mobile{
+    gap: 0;
+    justify-content: space-between;
+  }
+  .copyright {
+    margin-right: 80px;
+    @include mobile{
+      margin-right: 0;
+    }
+  }
+  .web {
+    gap: 20px;
+    @include mobile{
+      display: none;
+    }
+  }
+  .backtop {
+    margin-left: auto;
+  }
+
 }
-.backtop {
-  margin-left: auto;
+.mobile_footer_web{
+  display: none;
+  @include mobile{
+    display: flex;
+  }
 }
