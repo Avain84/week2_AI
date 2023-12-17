@@ -3,13 +3,14 @@ header .container {
   margin-bottom: 40px;
 }
 nav.header {
-  // 導覽列貼齊兩端
   background-color: $color-black100;
   border-bottom: 1px solid $color-black0;
   justify-content: space-between;
-  @include mobile{
+  @include mobile {
     position: fixed;
-    top: 0;left: 12px;right: 12px;
+    top: 0;
+    left: 12px;
+    right: 12px;
     margin: 0 auto;
     z-index: 10;
   }
@@ -25,6 +26,9 @@ nav.header {
 .nav-menu {
   gap: 20px;
   padding: 16px 0;
+  @include mobile {
+    display: none;
+  }
   li {
     font-weight: 700;
     font-size: $font-size;
@@ -38,10 +42,8 @@ nav.header {
     padding: 12px 0;
     line-height: 1.5;
   }
-  @include mobile {
-    display: none;
-  }
 }
+// 手機版選單
 .mobile_menu {
   display: none;
   @include mobile {
@@ -49,63 +51,63 @@ nav.header {
     input {
       display: none;
     }
-    .mobile_menu_icon img[alt="menu_close"]{
+    .mobile_menu_icon img[alt="menu_close"] {
       display: none;
     }
-    input:checked ~ .mobile_menu_icon img[alt="menu_close"]{
+    // 點擊時切換圖示
+    input:checked ~ .mobile_menu_icon img[alt="menu_close"] {
       display: block;
     }
-    input:checked ~ .mobile_menu_icon img[alt="menu"]{
+    input:checked ~ .mobile_menu_icon img[alt="menu"] {
       display: none;
     }
-    .mobile_menu_icon {
-      position: absolute;
-      right: 0px;top: 20px;
-      width: 40px;
-      height: 40px;
-      padding: 8px;
-      img {
-        object-fit: cover;
-      }
-    }
-    .mobile_menu_list {
-      background-color: $color-black100;
-      width: 100%;
-      height: calc(100vh - 80px - 137px);
-      
-      position: fixed;
-      top: 80.67px;left: 0;right: 0;
-      margin: 0 auto;
-
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      
-      transform: translateX(100%);
-      li {
-        padding: 10px 20px;
-        color: $color-black0;
-        a {
-          font-weight: 900;
-          font-size: $font-size * 5;
-          color: $color-black0;
-          text-decoration: none;
-        }
-        a:hover {
-          color: $color-black60;
-        }
-      }
-    }
     input:checked ~ .mobile_menu_list {
-      // display: block;
       transform: translateX(0);
-
     }
   }
 }
-.mobile_menu_footer{
+.mobile_menu_icon {
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+}
+.mobile_menu_list {
+  background-color: $color-black100;
+  width: 100%;
+  height: calc(100vh - 80px - 149px);
+
+  position: fixed;
+  top: 80.67px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // 先移至外面，點擊才移進來
+  transform: translateX(100%);
+  li {
+    display: flex;
+    align-items: center;
+    a {
+      font-weight: 900;
+      font-size: $font-size * 5;
+      color: $color-black0;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $color-black60;
+    }
+  }
+}
+// 手機選單頁尾
+.mobile_menu_footer {
   display: none;
-  .mobile_footer_web{
+  .mobile_footer_web {
     gap: 20px;
   }
   a {
@@ -115,20 +117,18 @@ nav.header {
     font-weight: 700;
     padding: 12px 0px;
   }
-  @include mobile{
-    background-color: $color-black100;
-
-    flex-direction: column;
-    gap: 12px;
-    input:checked ~ &{
-      display: block;
+  @include mobile {
+    input:checked ~ & {
+      background-color: $color-black100;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
       padding: 20px 0;
       border-top: 1px solid $color-black0;
       position: absolute;
-      top: calc(100vh - 80px - 56px);
-      left: 0;right: 0;
-      // left: 12px;right: 12px;
+      top: calc(100vh - 80px - 69px);
+      left: 0;
+      right: 0;
     }
-
   }
 }

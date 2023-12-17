@@ -1,6 +1,6 @@
 .section2 {
   margin-bottom: 160px;
-  @mixin mobile{
+  @mixin mobile {
     margin-bottom: 178px;
   }
 }
@@ -10,14 +10,13 @@
   justify-content: end;
   align-items: start;
   margin-bottom: 80px;
-  @include mobile{
+  @include mobile {
     display: block;
   }
   h3 {
-    // width: 32%;
     // 將p設定最大可達寬度，剩下的空間都給h3，可使確保h3可貼齊左側
     flex-grow: 1;
-    @include mobile{
+    @include mobile {
       font-size: $font-size * 1.25;
       margin-bottom: 24px;
     }
@@ -28,10 +27,11 @@
     font-weight: 900;
     font-size: $font-size * 3;
     line-height: 1.2;
-    @include mobile{
+    @include mobile {
       max-width: 100%;
       font-size: $font-size * 2;
-      .mobile_br{
+      .mobile_br {
+        // 手機版時，不強制換行
         display: none;
       }
     }
@@ -40,7 +40,7 @@
 
 .service {
   gap: 24px;
-  @include mobile{
+  @include mobile {
     flex-direction: column;
     gap: 12px;
   }
@@ -54,12 +54,12 @@
 
     flex-direction: column;
     gap: 20px;
-    p {
-      color: $color-black20;
-    }
-    @include mobile{
+    @include mobile {
       max-width: 100%;
       padding: 40px 20px;
+    }
+    p {
+      color: $color-black20;
     }
   }
 }

@@ -5,20 +5,21 @@
   // 垂直排列水平置中
   flex-direction: column;
   align-items: center;
-  @include mobile{
+  @include mobile {
     padding-top: 120px;
     padding-bottom: 120px;
     margin-bottom: 40px;
-    h1{
+    h1 {
       font-size: $font-size * 2;
     }
-    .btn{
+    .btn {
       margin-top: $font-size * 2;
     }
   }
-  .mobile_br{
+  // 手機版才顯示換行
+  .mobile_br {
     display: none;
-    @include mobile{
+    @include mobile {
       display: block;
     }
   }

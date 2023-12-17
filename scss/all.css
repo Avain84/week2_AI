@@ -187,6 +187,11 @@ nav.header {
   gap: 20px;
   padding: 16px 0;
 }
+@media (max-width: 568px) {
+  .nav-menu {
+    display: none;
+  }
+}
 .nav-menu li {
   font-weight: 700;
   font-size: 16px;
@@ -197,11 +202,6 @@ nav.header {
   display: inline-block;
   padding: 12px 0;
   line-height: 1.5;
-}
-@media (max-width: 568px) {
-  .nav-menu {
-    display: none;
-  }
 }
 
 .mobile_menu {
@@ -223,48 +223,46 @@ nav.header {
   .mobile_menu input:checked ~ .mobile_menu_icon img[alt=menu] {
     display: none;
   }
-  .mobile_menu .mobile_menu_icon {
-    position: absolute;
-    right: 0px;
-    top: 20px;
-    width: 40px;
-    height: 40px;
-    padding: 8px;
-  }
-  .mobile_menu .mobile_menu_icon img {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .mobile_menu .mobile_menu_list {
-    background-color: #020202;
-    width: 100%;
-    height: calc(100vh - 80px - 137px);
-    position: fixed;
-    top: 80.67px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(100%);
-  }
-  .mobile_menu .mobile_menu_list li {
-    padding: 10px 20px;
-    color: #ffffff;
-  }
-  .mobile_menu .mobile_menu_list li a {
-    font-weight: 900;
-    font-size: 80px;
-    color: #ffffff;
-    text-decoration: none;
-  }
-  .mobile_menu .mobile_menu_list li a:hover {
-    color: #919191;
-  }
   .mobile_menu input:checked ~ .mobile_menu_list {
     transform: translateX(0);
   }
+}
+
+.mobile_menu_icon {
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+}
+
+.mobile_menu_list {
+  background-color: #020202;
+  width: 100%;
+  height: calc(100vh - 80px - 149px);
+  position: fixed;
+  top: 80.67px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+}
+.mobile_menu_list li {
+  display: flex;
+  align-items: center;
+}
+.mobile_menu_list li a {
+  font-weight: 900;
+  font-size: 80px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.mobile_menu_list li a:hover {
+  color: #919191;
 }
 
 .mobile_menu_footer {
@@ -281,17 +279,15 @@ nav.header {
   padding: 12px 0px;
 }
 @media (max-width: 568px) {
-  .mobile_menu_footer {
+  input:checked ~ .mobile_menu_footer {
     background-color: #020202;
+    display: flex;
     flex-direction: column;
     gap: 12px;
-  }
-  input:checked ~ .mobile_menu_footer {
-    display: block;
     padding: 20px 0;
     border-top: 1px solid #ffffff;
     position: absolute;
-    top: calc(100vh - 80px - 56px);
+    top: calc(100vh - 80px - 69px);
     left: 0;
     right: 0;
   }
@@ -334,13 +330,13 @@ nav.header {
   }
 }
 .deco .deco1 {
-  animation: deco_animation 4s 0.7s infinite both;
+  animation: deco_animation 4s 0.7s infinite;
 }
 .deco .deco2 {
-  animation: deco_animation 4s 0.4s infinite both;
+  animation: deco_animation 4s 0.4s infinite;
 }
 .deco .deco3 {
-  animation: deco_animation 4s 0.1s infinite both;
+  animation: deco_animation 4s 0.1s infinite;
 }
 
 @keyframes deco_animation {
@@ -417,14 +413,14 @@ nav.header {
   flex-direction: column;
   gap: 20px;
 }
-.service .item p {
-  color: #f2f2f2;
-}
 @media (max-width: 568px) {
   .service .item {
     max-width: 100%;
     padding: 40px 20px;
   }
+}
+.service .item p {
+  color: #f2f2f2;
 }
 
 .section3 {
@@ -474,6 +470,39 @@ nav.header {
 }
 .enterprise > :nth-child(8) {
   margin-left: 18px;
+}
+
+.mobile_enterprise2 {
+  display: none;
+}
+.mobile_enterprise2 > :nth-child(8) {
+  margin-left: 0;
+}
+@media (max-width: 568px) {
+  .mobile_enterprise2 {
+    display: flex;
+    margin-top: 12px;
+  }
+}
+
+.scroll_deco {
+  position: relative;
+}
+.scroll_deco::before, .scroll_deco::after {
+  content: "";
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.scroll_deco::before {
+  left: 0;
+  background: linear-gradient(90deg, #000 0%, transparent 100%);
+}
+.scroll_deco::after {
+  right: 0;
+  background: linear-gradient(-90deg, #000 0%, transparent 100%);
 }
 
 .feedback {
@@ -706,10 +735,9 @@ nav.header {
 
 .card_pic {
   overflow: hidden;
-  height: 312px;
 }
 .card_pic img {
-  height: 100%;
+  width: 100%;
 }
 .card_pic img:hover {
   transition: 0.3s;
@@ -765,10 +793,6 @@ nav.header {
 .pages .active {
   background-color: #020202;
   color: #ffffff;
-}
-
-.dt_display_none {
-  display: none;
 }
 
 .section5 {

@@ -3,7 +3,8 @@
   padding-top: 80px;
   padding-bottom: 80px;
   justify-content: space-between;
-  @include mobile{
+  @include mobile {
+    // 手機板排序相反
     flex-direction: column-reverse;
     gap: 40px;
     align-items: start;
@@ -14,7 +15,7 @@
     a {
       font-size: $font-size * 5;
       font-weight: 900;
-      @include mobile{
+      @include mobile {
         font-size: $font-size * 3;
       }
     }

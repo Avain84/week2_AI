@@ -9,32 +9,32 @@
     padding: 20px 12px;
   }
 }
-.dt_footer{
+.dt_footer {
   gap: 20px;
-  @include mobile{
+  @include mobile {
     gap: 0;
     justify-content: space-between;
   }
   .copyright {
     margin-right: 80px;
-    @include mobile{
+    @include mobile {
       margin-right: 0;
     }
   }
   .web {
     gap: 20px;
-    @include mobile{
+    @include mobile {
+      // 手機版不顯示，重新建立一區排列再下面
       display: none;
     }
   }
   .backtop {
     margin-left: auto;
   }
-
 }
-.mobile_footer_web{
+.mobile_footer_web {
   display: none;
-  @include mobile{
+  @include mobile {
     display: flex;
   }
 }
