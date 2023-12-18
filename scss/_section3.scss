@@ -79,7 +79,7 @@
 .feedback {
   gap: 24px;
   @include mobile {
-    display: none;
+    display: none !important;
   }
   .item {
     max-width: calc((100% - 48px) / 3);
@@ -113,7 +113,7 @@
   // 在電腦時不出現輪播
   display: none;
   @include mobile {
-    display: block;
+    display: block !important;
   }
   .swiper-slide {
     padding-bottom: 32px;
