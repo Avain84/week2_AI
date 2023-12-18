@@ -512,7 +512,7 @@ nav.header {
 }
 @media (max-width: 568px) {
   .feedback {
-    display: none !important;
+    display: none;
   }
 }
 .feedback .item {
@@ -550,7 +550,7 @@ nav.header {
 }
 @media (max-width: 568px) {
   .swiper {
-    display: block !important;
+    display: block;
   }
 }
 .swiper .swiper-slide {
