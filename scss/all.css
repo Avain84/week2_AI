@@ -435,56 +435,40 @@ nav.header {
   .cooperation {
     margin-bottom: 48px;
   }
+}
+.cooperation h3 {
+  margin-bottom: 80px;
+}
+@media (max-width: 568px) {
   .cooperation h3 {
     font-size: 20px;
+    margin-bottom: 24px;
   }
 }
 
-.enterprise {
-  margin-top: 80px;
-  flex-wrap: wrap;
+.marquee_1 {
+  display: flex;
   gap: 20px;
+  margin-bottom: 20px;
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
-@media (max-width: 568px) {
-  .enterprise {
-    height: 40px;
-    margin-top: 24px;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-  }
-  .enterprise::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
-}
-.enterprise li {
-  height: 40px;
-}
-@media (max-width: 568px) {
-  .enterprise li {
-    flex-shrink: 0;
-  }
-}
-.enterprise img {
-  height: 100%;
-}
-.enterprise > :nth-child(8) {
-  margin-left: 18px;
-}
-@media (max-width: 568px) {
-  .enterprise > :nth-child(8) {
-    margin-left: 0;
-  }
+.marquee_1 img {
+  max-width: 160px;
 }
 
-.mobile_enterprise2 {
-  display: none;
+.marquee_2 {
+  display: flex;
+  gap: 20px;
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
 }
-@media (max-width: 568px) {
-  .mobile_enterprise2 {
-    display: flex;
-    margin-top: 12px;
-  }
+.marquee_2 img {
+  max-width: 160px;
 }
 
 .scroll_deco {
@@ -568,6 +552,14 @@ nav.header {
   background: #ffffff;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1080px);
+  }
+}
 .AI {
   margin: 0;
   background-color: #ffffff;
