@@ -3,12 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="scss/all.css" />
     <script
       src="https://kit.fontawesome.com/81060961aa.js"
       crossorigin="anonymous"
     ></script>
-    <title>week2-AI工具王</title>
+    <title>AI工具王(week2)</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <header class="wrap">
@@ -143,6 +151,7 @@
             </ul>
           </div>
         </div>
+        <!-- PC 版 -->
         <div class="feedback flex">
           <div class="item flex">
             <ul class="star flex">
@@ -220,6 +229,96 @@
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- 手機版 -->
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="item flex">
+                <ul class="star flex">
+                  <li><img src="img/icons/star.png" alt="icons star" /></li>
+                  <li><img src="img/icons/star.png" alt="icons star" /></li>
+                  <li><img src="img/icons/star.png" alt="icons star" /></li>
+                  <li><img src="img/icons/star.png" alt="icons star" /></li>
+                  <li><img src="img/icons/star.png" alt="icons star" /></li>
+                </ul>
+                <div class="feedback_txt">
+                  <p>
+                    非常喜歡 AI工具王 提供的 AI
+                    模型租賃服務，使用起來非常方便，而且效果非常好。對於我們公司的業務來說，這個服務非常重要，因為我們需要大量的數據進行分析和預測，AI工具王
+                    提供的 AI 模型能夠幫助我們節省大量時間和成本，實在是太棒了！
+                  </p>
+                </div>
+                <div class="customer flex">
+                  <div class="customer_pic">
+                    <img src="img/avatar3.png" alt="customer1_pic" />
+                  </div>
+                  <div class="customer_info">
+                    <p>陳小姐<br /><small>ABC科技有限公司</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="item flex">
+                <ul class="star flex">
+                  <li><img src="img/icons/star.png" alt="icons star" /></li>
+                  <li><img src="img/icons/star.png" alt="icons star" /></li>
+                  <li><img src="img/icons/star.png" alt="icons star" /></li>
+                  <li><img src="img/icons/star.png" alt="icons star" /></li>
+                  <li><img src="img/icons/star.png" alt="icons star" /></li>
+                </ul>
+                <div class="feedback_txt">
+                  <p>
+                    作為一家醫療器材公司，我們非常關注人工智能技術的應用，而
+                    AI工具王 提供的 AI
+                    模型租賃服務為我們帶來了很大的幫助。我們使用 AI工具王
+                    的模型進行醫學影像分析和預測，這些模型非常精確，能夠幫助我們更好地診斷病情，提高治療效果。感謝
+                    AI工具王 團隊的辛勤工作！
+                  </p>
+                </div>
+                <div class="customer flex">
+                  <div class="customer_pic">
+                    <img src="img/avatar1.png" alt="customer2_pic" />
+                  </div>
+                  <div class="customer_info">
+                    <p>劉小姐<br /><small>XYZ 醫療器材有限公司</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="item flex">
+                <ul class="star flex">
+                  <li><img src="img/icons/star.png" alt="icons star" /></li>
+                  <li><img src="img/icons/star.png" alt="icons star" /></li>
+                  <li><img src="img/icons/star.png" alt="icons star" /></li>
+                  <li><img src="img/icons/star.png" alt="icons star" /></li>
+                  <li><img src="img/icons/star.png" alt="icons star" /></li>
+                </ul>
+                <div class="feedback_txt">
+                  <p>
+                    我們銀行一直在尋找能夠幫助我們提高風險控制和客戶服務的解決方案，而
+                    AI工具王 提供的 AI
+                    模型租賃服務正好滿足了我們的需求。我們使用 AI工具王
+                    的模型進行客戶信用評估和詐騙檢測等任務，這些模型非常準確，能夠幫助我們更好地控制風險，提高客戶滿意度。非常感謝
+                    AI工具王 團隊的支持！
+                  </p>
+                </div>
+                <div class="customer flex">
+                  <div class="customer_pic">
+                    <img src="img/avatar2.png" alt="customer3_pic" />
+                  </div>
+                  <div class="customer_info">
+                    <p>黃先生<br /><small>EFG 銀行</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -450,5 +549,15 @@
         </ul>
       </div>
     </footer>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>

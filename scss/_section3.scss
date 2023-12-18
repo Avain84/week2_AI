@@ -43,13 +43,14 @@
   // }
   & > :nth-child(8) {
     margin-left: 18px;
+    @include mobile {
+      margin-left: 0;
+    }
   }
 }
 .mobile_enterprise2 {
   display: none;
-  & > :nth-child(8) {
-    margin-left: 0;
-  }
+
   @include mobile {
     display: flex;
     margin-top: 12px;
@@ -78,11 +79,9 @@
 .feedback {
   gap: 24px;
   @include mobile {
-    flex-direction: column;
-    gap: 12px;
+    display: none;
   }
   .item {
-    // width: 100%;
     max-width: calc((100% - 48px) / 3);
     padding: 40px;
     border-radius: $font-size;
@@ -90,10 +89,6 @@
 
     flex-direction: column;
     gap: 20px;
-    @include mobile {
-      max-width: 100%;
-      padding: 20px;
-    }
   }
 }
 .star {
@@ -113,4 +108,27 @@
 }
 .customer_info {
   flex-grow: 1;
+}
+.swiper {
+  // 在電腦時不出現輪播
+  display: none;
+  @include mobile {
+    display: block;
+  }
+  .swiper-slide {
+    padding-bottom: 32px;
+  }
+  .item {
+    max-width: 100%;
+    padding: 20px;
+    background: #ffffff14;
+    border-radius: $font-size;
+
+    flex-direction: column;
+    gap: 20px;
+  }
+  // 調整點擊樣式
+  .swiper-pagination-bullet {
+    background: $color-black0;
+  }
 }

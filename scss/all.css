@@ -471,12 +471,14 @@ nav.header {
 .enterprise > :nth-child(8) {
   margin-left: 18px;
 }
+@media (max-width: 568px) {
+  .enterprise > :nth-child(8) {
+    margin-left: 0;
+  }
+}
 
 .mobile_enterprise2 {
   display: none;
-}
-.mobile_enterprise2 > :nth-child(8) {
-  margin-left: 0;
 }
 @media (max-width: 568px) {
   .mobile_enterprise2 {
@@ -510,8 +512,7 @@ nav.header {
 }
 @media (max-width: 568px) {
   .feedback {
-    flex-direction: column;
-    gap: 12px;
+    display: none;
   }
 }
 .feedback .item {
@@ -521,12 +522,6 @@ nav.header {
   background: rgba(255, 255, 255, 0.0784313725);
   flex-direction: column;
   gap: 20px;
-}
-@media (max-width: 568px) {
-  .feedback .item {
-    max-width: 100%;
-    padding: 20px;
-  }
 }
 
 .star {
@@ -548,6 +543,29 @@ nav.header {
 
 .customer_info {
   flex-grow: 1;
+}
+
+.swiper {
+  display: none;
+}
+@media (max-width: 568px) {
+  .swiper {
+    display: block;
+  }
+}
+.swiper .swiper-slide {
+  padding-bottom: 32px;
+}
+.swiper .item {
+  max-width: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.0784313725);
+  border-radius: 16px;
+  flex-direction: column;
+  gap: 20px;
+}
+.swiper .swiper-pagination-bullet {
+  background: #ffffff;
 }
 
 .AI {
